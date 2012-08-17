@@ -1,0 +1,500 @@
+killall weechat-curses
+weechat-curses 
+emerge -pv tmux
+sudo echo app-misc/tmux USE="vim-syntax" >> /etc/portage/package.use 
+su
+tmuxattach 
+exit
+luakit 
+exit
+luakit 
+deluge-gtk 
+exit
+emerge -pv mpc
+emerge -pv mpc mpd
+exit
+emerge -pv imagemagik
+emerge -pv imagemagick
+emerge -pv CutyCapt
+sudo emerge media-gfx/cutycapt
+su
+call pathogen#infect()
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+let g:gist_clip_command = 'xclip -selection clipboard'
+clear
+ls
+mkdir chroot
+cd chroot
+mkdir gentoo
+cd gentoo 
+cp /portage-latest.tar.bz2 .
+cp /stage3-amd64-20120621.tar.bz2 .
+time tar xjpf stage3*
+sudo time tar xjpf stage3*
+sudo tar xjpf stage3*
+ls
+cp portage-latest.tar.bz2 usr/
+sudo cp portage-latest.tar.bz2 usr/
+cd /usr/
+ls
+sudo tar xjf portage-lat*
+ls portage
+cd ..
+ls
+mount -t proc proc proc/
+sudo mount -t proc proc proc/
+cd ..
+ls
+cd ..
+ls
+cd 
+cd chroot/
+ls
+cd gentoo/
+ls
+ls usr/
+ls usr/portage-latest.tar.bz2 
+ls usr/portage
+ls usr/
+cd usr 
+sudo tar xjf portage-lat*
+ls
+ls portage
+cd ..
+ls
+sudo mount -t proc proc proc/
+mount --rbind /dev dev/
+sudo mount --rbind /dev dev/
+chroot /mnt/gentoo /bin/bash
+cd ..
+chroot gentoo /bin/bash
+sudo chroot gentoo /bin/bash
+exit
+alsamixer
+exit
+server
+exit
+tail -f .cache/awesome/stdout 
+tail -f .cache/awesome/stderr 
+clear
+cd /nas/media/
+ls
+rm .asoundrc 
+cd /usr/share/awesome/lib
+sudo wget /usr/share/awesome/lib
+sudo wget http://gitorious.org/bashets/bashets/blobs/raw/master/bashets.lua
+cd
+cd .config/awesome
+vim rc.lua 
+vim ~/.config/luakit/globals.lua 
+cd ..
+cd luakit/
+vim rc.lua 
+vim local/favs 
+ls
+cd
+ls /etc/vim
+sudo mv /etc/vimrc .vimrc
+vim .vimrc 
+chown setkeh:users .vimrc 
+vim .vimrc 
+cd .local/share/
+rm -r luakit/*
+cp -r ~/.config/luakit/* luakit/
+ls luakit/
+cd luakit/adblock/
+ls
+cd ..
+ls
+rm -r *
+ls
+cp -r ~/.config/luakit/local/* .
+ls
+vim favs 
+ls
+vim favs 
+vim favs 
+git config --global github.user setkeh
+vim favs 
+ls
+vim favs 
+vim 
+cd 
+cd chroot/
+ls
+cp -L /etc/resolv.conf gentoo/etc/
+sudo cp -L /etc/resolv.conf gentoo/etc/
+sudo cp -L /etc/make.conf gentoo/etc/
+cd
+cd .config/luakit/
+vim globals.lua 
+cd
+vim markdown-1.2.2.vba.gz +":source %"
+cd github/
+ls
+cd..
+cd ..
+cd .config/awesome/
+vim README.md 
+cd
+cd /nas/media/
+ls
+cd /mnt
+ls
+cd
+cp /mnt/home/setkeh/MumbleAdminCert.p12 .
+cd .config/awesome/
+vim rc.lua 
+vim rc.lua 
+cd
+clear
+cp /nas/media/dotfiles.tar .
+tar -xvf dotfiles.tar 
+ls
+rm vimrc 
+bash
+weechat-curses 
+weechat-curses \
+weechat-curses 
+sudo umount/mnt
+sudo umount /mnt
+sudo mount /dev/sdb3 /mnt
+sudo mount /dev/sdb4 /mnt/home
+sudo cp /mnt/etc/tmux.conf /etc/tmux.conf
+sudo cp /mnt/etc/vimrc /etc/vimrc
+cp /mnt/home/setkeh/.bashrc .
+bash
+vim .bashrc 
+starttmux 
+cd .local/share/luakit/
+ls
+cd ..
+ln -n ~/.config/luakit/local/* ~/.local/share/luakit/
+rm -r luakit/*
+ln -n ~/.config/luakit/local/* ~/.local/share/luakit/
+ln -s ~/.config/luakit/local/* ~/.local/share/luakit/
+ls luakit/
+rm luakit/*
+ln -nr ~/.config/luakit/local/* ~/.local/share/luakit/
+ln -nR ~/.config/luakit/local/* ~/.local/share/luakit/
+ln --help
+ln -s ~/.config/luakit/local/* ~/.local/share/luakit/
+ls luakit/
+ls
+cd luakit/
+ls
+cd
+tmuxattach 
+killall pulseaudio
+pulseaudio 
+killall pulseaudio
+pulseaudio 
+killall pulseaudio
+emerge -pv pulseaudio
+~cat /etc/conf.d/pulseaudio
+cat /etc/conf.d/pulseaudio
+cat /etc/init.d/pulseaudio
+sudo vim /etc/make.conf
+emerge -vauDN world
+sudo emerge -vauDN world
+sudo /etc/init.d/alsasound start
+cat /proc/asound/cards
+sudo emerge -avt alsa-plugins
+sudo alsaconf
+emerge -pv vlc
+sudo vim make.conf
+sudo vim /etc/make.conf
+sudo emerge -vauDN world
+emerge -av adobe-flash
+sudo emerge -av adobe-flash
+su
+weechat-curses 
+killall tmux
+alsamixer 
+a
+alsamixer 
+clear
+cp /nas/media/bitcoinwallet.tar .
+cp /nas/media/namecoinwallet.tar .
+tar -xvf bitcoinwallet.tar 
+tar -xvf namecoinwallet.tar
+bitcoin
+cd .bitcoin/
+l
+ls
+rm blk0001.dat  blk0002.dat  blkindex.dat
+bitcoin
+rm -r database/
+bitcoin
+ls
+rm -r database/ db.log debug.log 
+ls
+bitcoin
+ls database/
+cd ..
+mv .bitcoin/ bitcoinwalletbak
+bitcoin
+cp bitcoinwalletbak/wallet.dat .bitcoin/
+cp bitcoinwalletbak/bitcoin.conf .bitcoin/
+bitcoin
+bitcoin
+alsamixer 
+exit
+vim /bashscripts/weetabawesome
+exit
+cd /var/lib/layman/Armageddon/
+ls
+ls app-editors/
+ls app-misc/
+ls dev-lua/
+ls media-video/
+ls net-misc/
+ls sys-apps/
+ls x11-apps/
+ls x11-apps/grandr/
+vim x11-apps/grandr/grandr-0.1-r2.ebuild 
+vim x11-apps/grandr/Manifest 
+vim x11-apps/grandr/metadata.xml 
+clear
+cd
+exit
+cd .config/awesome/
+cim rc.lua 
+vim rc.lua 
+ce
+exit
+su
+su
+tmuxattach 
+cd .config/awesome/
+vim rc.lua 
+vim rc.lua 
+cd ..
+cd luakit/
+vim globals.lua 
+cd
+cd .vim
+ls
+ls autoload/
+cd
+cd .config/luakit/
+vim globals.lua 
+cd 
+cp -r /mnt/home/setkeh/.ncmpcpp/ .
+sudo vim /etc/mpd.conf 
+sudo /etc/init.d/mpd start
+vim .config/awesome/rc.lua 
+tmuxattach 
+starttmux 
+starttmux 
+tmuxattach 
+sud
+su
+cp /mnt/home/setkeh/screenrecord .
+./screenrecord 
+vim screenrecord 
+./screenrecord 
+vim screenrecord 
+./screenrecord 
+vim screenrecord 
+./screenrecord 
+emerge -pv libx264
+emerge -pv x264
+emerge -av x264
+sudo emerge -av x264
+emerge -av x264
+./screenrecord 
+vim screenrecord 
+./screenrecord 
+vim screenrecord 
+./screenrecord 
+acrecord -L
+vim screenrecord 
+./screenrecord 
+./screenrecord 
+./screenrecord 
+vim screenrecord 
+./screenrecord 
+vim screenrecord 
+./screenrecord 
+vim screenrecord 
+./screenrecord 
+vim screenrecord 
+./screenrecord 
+vim screenrecord 
+./screenrecord 
+vim screenrecord 
+./screenrecord 
+./screenrecord 
+vim screenrecord 
+./screenrecord 
+vim screenrecord 
+./screenrecord 
+vim screenrecord 
+./screenrecord 
+vim screenrecord 
+./screenrecord 
+emerge -pv x264
+emerge -pv ffmpeg
+echo "media-video/ffmpeg x264 vorbis mp3 speex aac aacplus libv4l" >> /etc/portage/package.use 
+./screenrecord 
+./screenrecord 
+vim screenrecord 
+./screenrecord 
+./screenrecord 
+./screenrecord 
+./screenrecord 
+./screenrecord 
+clear
+rm output.mkv 
+clear
+clear
+./screenrecord 
+bitcoin
+bitcoin
+su
+ncmpcpp 
+weechat-curses 
+vim .weechat/irc.conf
+weechat-curses 
+weechat-curses 
+killall tmux
+tmuxattach 
+starttmux 
+su 
+ncmpcpp 
+mkdir /home/setkeh/Music/playlists
+mkdir /home/setkeh/Music/
+mkdir /home/setkeh/Music/playlists
+vim .config/awesome/rc.lua 
+weechat-curses 
+killall tmux
+tmuxattach 
+sudo /etc/init.d/dbus restart
+exit
+sudo vim /etc/portage/package.use 
+exit
+sudo vim /etc/portage/package.use 
+exit
+weechat-curses 
+killall tmux
+bitcoin
+starttmux 
+emerge -pv luainotify
+echo "dev-lua/luainotify" >> /etc/portage/package.accept_keywords 
+su 
+VBox
+VirtualBox
+qlist virtualbox | grep bin
+VBoxHeadless
+ls -l /
+sudo vim /etc/portage/package.use 
+Virtualbox
+VirtualBox
+VirtualBox
+sudo VirtualBox
+vim .config/awesome/rc.lua 
+cd .config/awesome/awesompd/
+ls icons/
+vim awesompd.lua 
+cd ..
+vim rc.lua 
+ls awesompd/
+ls awesompd/icons/
+ls -la
+ls -la awesompd
+vim awesompd/awesompd.lua 
+vim rc.lua 
+vim awesompd/awesompd.lua 
+vim awesompd/awesompd.lua 
+fe awesompd/icons/default_album_cover.png 
+feh awesompd/icons/default_album_cover.png 
+ls -la awesompd/icons/
+vim /etc/mpd.conf 
+ls -la /etc/mpd.conf 
+sudo chmod 0777 /etc/mpd.conf 
+sudo chown setkeh:users /etc/mpd.conf 
+ls -la /etc/mpd.conf 
+gmpc
+vim rc.lua 
+ls awesompd/
+vim awesompd/jamendo.lua 
+vim rc.lua 
+rm -r awesompd/
+git clone https://github.com/alexander-yakushev/awesompd.git
+ls
+vim rc.lua 
+ls -l /nas/
+ls -l /nas/music/
+ls -l /nas/music/OF\ MICE\ AND\ MEN/
+ls -la /nas/music/OF\ MICE\ AND\ MEN/
+sudo chmod -R setkeh:users /nas/music/
+sudo chmod -r setkeh:users /nas/music/
+sudo chown -R setkeh:users /nas/music/
+vim rc.lua 
+vim rc.lua 
+ls -l awesompd/
+ls -la awesompd/
+vim rc.lua 
+key-mon 
+cd
+cp /mnt/home/setkeh/.Xauthority .
+key-mon 
+virtualbox
+qemu
+virtual
+virtualbox
+vbox
+virtualbox
+bash
+tail -f .cache/awesome/stderr 
+ncmpcpp 
+tail -f .cache/awesome/stderr 
+xinit
+xinit
+xinit
+xinit
+xinit
+xinit
+exit
+sudo /etc/init.d/mpd stop
+exit
+cat /etc/make.conf | sprunge 
+exit
+tmuxattach 
+exit
+tmuxattach 
+tmuxattach 
+tmuxattach 
+exit
+tmux
+tmuxattach 
+tmuxa
+tmuxattach 
+tmuxattach 
+HEY CANT EVEN READ RAWR tmuxattach tmuxattach 
+/me is annoyed lol can you tell 
+tmuxattach 
+tmuxattach 
+tmuxattach 
+tmuxattach 
+tmuxattach 
+tmuxattach 
+tmuxattach 
+tmuxattach 
+exit
+exit
+tmux
+tmuxattach
+exit
+tmuxattach 
+exit
+tmuxattach 
+exit
+su
+clear
+clear
+VirtualBox 
+VirtualBox --help
+tmuxattach 

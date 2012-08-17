@@ -1,0 +1,3 @@
+xrdb ~/.Xresources
+#exec ck-launch-session wmii
+exec ck-launch-session dbus-launch awesome
