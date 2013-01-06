@@ -1,0 +1,107 @@
+2012-08-31 02:17:51		irc: connecting to server 192.168.1.7/1991 (SSL)...
+2012-08-31 02:17:51		gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2012-08-31 02:17:51	=!=	gnutls: peer's certificate is NOT trusted
+2012-08-31 02:17:51	=!=	gnutls: peer's certificate issuer is unknown
+2012-08-31 02:17:51		gnutls: receiving 1 certificate
+2012-08-31 02:17:51		 - certificate[1] info:
+2012-08-31 02:17:51		   - subject `C=US,ST=SomeState,L=SomeCity,O=SomeCompany,OU=znc,CN=host.unknown,EMAIL=znc@host.unknown', issuer `C=US,ST=SomeState,L=SomeCity,O=SomeCompany,OU=znc,CN=host.unknown,EMAIL=znc@host.unknown', RSA key 2048 bits, signed using RSA-SHA1, activated `2012-08-30 15:18:27 UTC', expires `2022-08-28 15:18:27 UTC', SHA-1 fingerprint `00579ed4196077431373aa832e9b1e69275e4151'
+2012-08-31 02:17:51	=!=	gnutls: the hostname in the certificate does NOT match "192.168.1.7"
+2012-08-31 02:17:51		irc: connected to 192.168.1.7/1991 (192.168.1.7)
+2012-08-31 02:17:51	--	Welcome to the Coldfront IRC Network setkeh_!setkehcf@CPE-124-180-174-254.lns12.lon.bigpond.net.au
+2012-08-31 02:17:51	--	Your host is ice.coldfront.net, running version Unreal3.2.9
+2012-08-31 02:17:51	--	This server was created Wed Jan 11 2012 at 15:05:26 CET
+2012-08-31 02:17:51	--	ice.coldfront.net Unreal3.2.9 iowghraAsORTVSxNCWqBzvdHtGp lvhopsmntikrRcaqOALQbSeIKVfMCuzNTGjZ
+2012-08-31 02:17:51	--	CMDS=KNOCK,MAP,DCCALLOW,USERIP UHNAMES NAMESX SAFELIST HCN MAXCHANNELS=40 CHANLIMIT=#:40 MAXLIST=b:60,e:60,I:60 NICKLEN=30 CHANNELLEN=32 TOPICLEN=307 KICKLEN=307 AWAYLEN=307 :are supported by this server
+2012-08-31 02:17:51	--	MAXTARGETS=20 WALLCHOPS WATCH=128 WATCHOPTS=A SILENCE=15 MODES=12 CHANTYPES=#~ PREFIX=(qaohv)~&@%+ CHANMODES=beI,kfL,lj,psmntirRcOAQKVCuzNSMTGZ NETWORK=Coldfront CASEMAPPING=ascii EXTBAN=~,qjncrR ELIST=MNUCT :are supported by this server
+2012-08-31 02:17:51	--	STATUSMSG=~&@%+ EXCEPTS INVEX :are supported by this server
+2012-08-31 02:17:51	--	There are 5 users and 1446 invisible on 7 servers
+2012-08-31 02:17:51	--	15 :operator(s) online
+2012-08-31 02:17:51	--	1994 :channels formed
+2012-08-31 02:17:51	--	I have 380 clients and 3 servers
+2012-08-31 02:17:51	--	Current Local Users: 380  Max: 1002
+2012-08-31 02:17:51	--	Current Global Users: 1451  Max: 4005
+2012-08-31 02:17:51	--	- ice.coldfront.net Message of the Day -
+2012-08-31 02:17:51	--	- 3/5/2012 21:10
+2012-08-31 02:17:51	--	- Founded May 10th, 2002
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	- The Coldfront Network is dedicated to gaming community clans and
+2012-08-31 02:17:51	--	- guilds. Our primary goal and interest is to make YOU, our guest
+2012-08-31 02:17:51	--	- feel at home on our network. We try and keep the rules very simple
+2012-08-31 02:17:51	--	- to allow for enjoyment and a good chatting environment.
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	- RULES: Please use the /rules command. Basic summary: play nice.
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	- Individual channels may have additional rules that you must also
+2012-08-31 02:17:51	--	- abide by if you wish to use them.
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	- Please respect our other guests on the network and all will be well.
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	- We do reserve the right to deny anyone access to the Coldfront Network.
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	- Please visit http://www.coldfront.net/privacy-policy for our
+2012-08-31 02:17:51	--	- privacy policy.
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	- -------------------------------------------------------------------
+2012-08-31 02:17:51	--	- IRC Server List
+2012-08-31 02:17:51	--	- -------------------------------------------------------------------
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	- irc.coldfront.net (random server)
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	- frozen.coldfront.net    Dallas, TX
+2012-08-31 02:17:51	--	- polar.coldfront.net     Newark, NJ
+2012-08-31 02:17:51	--	- stark.coldfront.net     Fremont, CA
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	- ice.coldfront.net       Amsterdam,NL
+2012-08-31 02:17:51	--	- snow.coldfront.net      London, UK
+2012-08-31 02:17:51	--	- burizado.coldfront.net  Tokyo, JP
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	- Ports 6667, 8080 and SSL 7778
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	- NOTE: All server to server communication is encrypted with SSL
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	- -------------------------------------------------------------------
+2012-08-31 02:17:51	--	- Services
+2012-08-31 02:17:51	--	- -------------------------------------------------------------------
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	- /NickServ help commands - /ns may be substituted
+2012-08-31 02:17:51	--	- /ChanServ help commands - /cs may be substituted
+2012-08-31 02:17:51	--	- /MemoServ help commands - /ms may be substituted
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	- -------------------------------------------------------------------
+2012-08-31 02:17:51	--	- IRC Staff
+2012-08-31 02:17:51	--	- -------------------------------------------------------------------
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	- Server Admins:
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	-      Mag        - Server Admin  - Born to drink...
+2012-08-31 02:17:51	--	-      Merlin     - Server Admin  - I eat Harry Potter for breakfast
+2012-08-31 02:17:51	--	- 	
+2012-08-31 02:17:51	--	- IRCops:
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	-      FrostByghte - Owner, Coldfront LLC
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	-      \ aka BackSlash   - Because pronouncability is for MVWTXLFPKs.
+2012-08-31 02:17:51	--	-      Citizenkane       - Pestering FrostByghte forever
+2012-08-31 02:17:51	--	-      Diaego            - Radio monkey
+2012-08-31 02:17:51	--	-      Entity            - Purr! =^.^=
+2012-08-31 02:17:51	--	-      gluon             - morn
+2012-08-31 02:17:51	--	-      Lane/Rainbooty    - I am the mooodle of a moodern major general!
+2012-08-31 02:17:51	--	-      PepsiTab          - Look Mister Bubbles, it's an ANGEL!
+2012-08-31 02:17:51	--	-      Renril            - Meow! =^.^=
+2012-08-31 02:17:51	--	-      Singe             - frost is not a hillbilly
+2012-08-31 02:17:51	--	-      syberghost        - Hello, I am syberghost and I kill u fadder
+2012-08-31 02:17:51	--	-      Vertex            - I'm graduating on Coldfront
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	- Join #irchelp for any network problems you may need help with.
+2012-08-31 02:17:51	--	- Use /helpop for help with commands, user modes and channels modes.
+2012-08-31 02:17:51	--	- Please email irc@coldfront.net with any questions or concerns.
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	- We hope you enjoy your time on Coldfront IRC!
+2012-08-31 02:17:51	--	-
+2012-08-31 02:17:51	--	- -------------------------------------------------------------------
+2012-08-31 02:17:51	--	End of /MOTD command.
+2012-08-31 02:17:51	--	User mode [+iwx] by setkeh_
+2012-08-31 02:17:52	--	Global (services@coldfront.net): [Logon News - May 06 2012] Coldfront global IRC Servers: USA: Frozen.coldfront.net (Dallas, TX) stark.coldfront.net (Fremont, CA) polar.coldfront.net (Newark, NJ) Europe: snow.coldfront.net (London, United Kingdom) ice.coldfront.net (Amsterdam, Nederlands) Eastern: burizado.coldfront.net (Tokyo, Japan)
+2012-08-31 02:17:52	--	Global (services@coldfront.net): [Logon News - Apr 03 2012] Check out some of our community channels! | Radio: #eve-radio #newedenradio #subspace-radio | EVE: #eve #evetv | PotBS: #burningsea | Star Trek Online: #sto | Champions Online: #championsonline | CyberNations: #CyberNations | Star Wars: #tor #swtor | Project Terra: #project-terra | TV: #totalgamingtv | Blame Frostbyghte for this message losing it's colo(u)rs.
+2012-08-31 02:18:05	--	#eve-chaos: You need a registered nick to join that channel.
+2012-08-31 02:18:21		irc: disconnected from server

@@ -1,0 +1,18 @@
+2012-08-12 14:54:14	-->	setkeh1 (~setkeh@121-79-10-116.bb.ispone.net.au) has joined #linuxdistrocommunity
+2012-08-12 14:54:15	--	Topic for #linuxdistrocommunity is "Official IRC channel of the Linux Distro Community. Join our growing community - http://www.linuxdistrocommunity.com | Mumble Chat: linuxdistrocommunity.mumble.com Port: 3259 | Code of Conduct - http://tinyurl.com/ldccode | Pastes to http://tinyurl.com/ldcpaste | Screenshots to http://tinyurl.com/ldcscreens | Video Tutorials - http://tinyurl.com/ldcvideos"
+2012-08-12 14:54:15	--	Topic set by Valtam (~Valtam@unaffiliated/valtam) on Mon, 06 Aug 2012 20:47:07
+2012-08-12 14:54:15	--	Nicks #linuxdistrocommunity: [@ChanServ @KiraYameto @LDCInfoCenter +darthlukan +Lyxer01 +Optichip +OptiStanford +pdq +popey +preecher +Timmy_L \x ackt1c alexandros_c ArlinaMekia Armageddon bax Bloodstar c_smith drewid exocaesar hubutm20 jdhore jkeyes0 metulburr nankura neofutur Pilot_51 pingcasts SEEVCar setkeh setkeh1 Valtam]
+2012-08-12 14:54:15	--	Channel #linuxdistrocommunity: 33 nicks (3 ops, 0 halfops, 8 voices, 22 normals)
+2012-08-12 14:54:16	--	Mode #linuxdistrocommunity [+cnt]
+2012-08-12 14:54:17	--	Channel created on Mon, 12 Dec 2011 10:40:45
+2012-08-12 14:54:23	setkeh1	!whoami
+2012-08-12 14:54:24	@KiraYameto	setkeh1: I don't recognize you.
+2012-08-12 14:54:33	setkeh1	!btlogin
+2012-08-12 14:54:35	@KiraYameto	setkeh1: Error: Your hostmask doesn't match or your password is wrong.
+2012-08-12 14:54:40	setkeh1	good
+2012-08-12 14:55:21	<--	SEEVCar (~cgbbbfp@121-73-164-194.dsl.telstraclear.net) has quit (Ping timeout: 260 seconds)
+2012-08-12 14:55:55	setkeh1	!list Bantracker
+2012-08-12 14:55:56	@KiraYameto	setkeh1: banlink, banlog, banreview, bansearch, btlogin, comment, duration, mark, and updatebt
+2012-08-12 14:56:09	setkeh1	!bansearch ArlinaMekia 
+2012-08-12 14:56:11	@KiraYameto	setkeh1: Error: Your hostmask doesn't match or your password is wrong.
+2012-08-12 14:56:18		irc: disconnected from server
