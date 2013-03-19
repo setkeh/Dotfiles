@@ -27,7 +27,7 @@ set encoding=utf-8
 "CUSTOM SETTINGS
 "Set Settings Custom
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+set hlsearch
 set number
 set autoindent
 set backupdir=~/.vim
