@@ -1,13 +1,17 @@
-" An example for a vimrc file.
+" Setkeh VIMRC.
 "
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2011 Apr 15
+" Maintainer:	setkeh <setkeh@gmail.com>
 "
 " To use it, copy it to
 "     for Unix and OS/2:  ~/.vimrc
 "	      for Amiga:  s:.vimrc
 "  for MS-DOS and Win32:  $VIM\_vimrc
 "	    for OpenVMS:  sys$login:.vimrc
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" DEFAULTS
+" Some Vime Defaults
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
@@ -17,21 +21,63 @@ endif
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+set encoding=utf-8 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"CUSTOM SETTINGS
 "Set Settings Custom
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set number
 set autoindent
 set backupdir=~/.vim
-set ruler
+"set shell=zsh
 
-"Pathogen Plugin Management
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PATHOGEN
+" Pathogen Plugin Management
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 
 call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 let g:gist_clip_command = 'xclip -selection clipboard'
 
-" allow backspacing over everything in insert mode
+"Powerline configuration
+let g:Powerline_symbols = 'unicode'
+set laststatus=2
+set fillchars+=stl:\ ,stlnc:\
+set t_Co=256 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MULTIPURPOSE TAB KEY
+" Stolen: Destroy All Software <https://github.com/garybernhardt>
+" Indent if we're at the beginning of a line. Else, do completion.
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ARROW KEYS ARE UNACCEPTABLE
+" Stolen: Destroy All Software <https://github.com/garybernhardt>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" BACKSPACEING
+" Allow backspacing over everything in insert mode
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set backspace=indent,eol,start
 
 if has("vms")
@@ -44,8 +90,10 @@ set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
-" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
-" let &guioptions = substitute(&guioptions, "t", "", "g")
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" OTHER
+" Other Vim Custom / Defaults
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
