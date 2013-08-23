@@ -1,0 +1,13 @@
+#:kivy 1.0
+#:import Pga0.py p0_mhs
+
+<cginfo>:
+    label_wid: my_custom_label
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+
+        Label:
+            id: my_custom_label
+            text: root.info

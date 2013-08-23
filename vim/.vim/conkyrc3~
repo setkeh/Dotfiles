@@ -1,0 +1,63 @@
+######################
+# - Conky settings - #
+######################
+update_interval 0.3
+total_run_times 0
+net_avg_samples 1
+cpu_avg_samples 2
+
+imlib_cache_size 0
+double_buffer yes
+no_buffers yes
+
+format_human_readable
+
+#####################
+# - Text settings - #
+#####################
+use_xft yes
+xftfont DejaVu Sans mono:size=8
+override_utf8_locale no
+text_buffer_size 2048
+
+#############################
+# - Window specifications - #
+#############################
+#own_window_class Conky
+#own_window yes
+#own_window_type normal
+#own_window_type override
+#own_window_transparent yes
+#own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window yes
+own_window_argb_visual true
+own_window_argb_value 0
+own_window_type normal
+own_window_hints undecorated,below,sticky,skip_taskbar
+
+alignment top_middle
+gap_y 25
+gap_x 444425
+border_inner_margin 8
+
+minimum_size 180 500
+maximum_width 200
+maximum_height 560
+
+default_bar_size 92 6
+
+#########################
+# - Graphics settings - #
+#########################
+draw_shades yes
+default_shade_color 000000
+default_color FFFFFF
+
+TEXT
+${alignc}BTC-E Ticker
+${execi 400 /home/setkeh/.conky/ozcoinapi.sh btceresync}
+${font}${alignc}BTC -> USD:${scroll 50 High: $$ ${execi 300 /home/setkeh/.conky/ozcoinapi.sh bbhigh}  Low: $$ ${execi 300 /home/setkeh/.conky/ozcoinapi.sh bblow}  Avg: $$ ${execi 300 /home/setkeh/.conky/ozcoinapi.sh bbavg}}
+
+${font}${alignc}LTC -> BTC:${scroll 50 High: ${execi 300 /home/setkeh/.conky/ozcoinapi.sh blbhigh} ฿  Low: ${execi 300 /home/setkeh/.conky/ozcoinapi.sh blblow} ฿  Avg: ${execi 300 /home/setkeh/.conky/ozcoinapi.sh blbavg} ฿}
+
+${font}${alignc}LTC -> USD:${scroll 50 High: $$ ${execi 300 /home/setkeh/.conky/ozcoinapi.sh bluhigh}  Low: $$ ${execi 300 /home/setkeh/.conky/ozcoinapi.sh blulow}  Avg: $$ ${execi 300 /home/setkeh/.conky/ozcoinapi.sh bluavg}}

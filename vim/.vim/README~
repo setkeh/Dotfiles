@@ -1,0 +1,43 @@
+# Ozcoin LTC Pool Code.
+
+Please make your Own branches using your Usernames to commit code changes. 
+Then add a pull request to merge it into the live code.
+Editing the Live Code is probably a bad Idea incase something goes whoopsie.
+
+The Commands To do this are:
+
+Create the branch on your local machine:
+
+	git branch yourusernamehere
+
+E.G: git branch setkeh
+
+Push the branch to Bitbucket:
+
+	git push origin yourusernamehere
+
+E.G: git push origin setkeh
+
+Switch to your new branch:
+	
+	git checkout yourusernamehere
+
+E.G: git checkout setkeh
+
+You can see all branches created by using:
+
+	git branch 
+
+Which will show:
+
+	* approval_messages
+	master
+	master_clean
+
+This Repo Also has Issue Tracker And a Wiki.
+If you find and Issue Please put it in the Issue Tracker.
+And Document Code changes in the wiki.
+
+Badass 
+NOW GET TO WORK !!!!!!!!!!!!!!!!!!!!
+XD
