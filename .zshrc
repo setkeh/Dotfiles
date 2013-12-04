@@ -33,6 +33,10 @@ export HISTSIZE=2000
 export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
 
+# User Defined Exports
+export PATH=$PATH:$HOME/avr32-tools/bin
+export PATH=$PATH:$HOME/.gem/ruby/1.9.3/bin
+
 # setopt
 setopt ALL_EXPORT
 setopt notify globdots correct pushdtohome cdablevars autolist
@@ -58,64 +62,82 @@ eval PR_LIGHT_$color='%{$fg[${(L)color}]%}'
 (( count = $count + 1 ))
 done
 
+#Start WM/DE On Logon TTY1
+echo "Checking Current TTY"
+TTY=$(tty)
+if [ $TTY = "/dev/tty1" ]
+	then
+	echo "Current TTY = $TTY Running Awesome"
+	/usr/bin/xinit
+	# This can be changed from /usr/bin/xinit to somthing like
+	# /usr/bin/enlightenment_start
+	# or
+	# /usr/bin/awesome
+	# Depending on how you would like to start your WM
+else
+	echo "Current TTY = $TTY"
+	echo "No Need for a Display Manager"
+	echo "Have Fun"
+fi
+
+# Set the Prompt
 PR_NO_COLOR="%{$terminfo[sgr0]%}"
 PROMPT='%{$fg[cyan]%}%n%{$fg[blue]%}@%{$fg[magenta]%}%m %{$fg[yellow]%}%~ %{$fg[red]%}$(vcs_info_wrapper)%{$fg[green]%}%#%{$reset_color%} '
 #PS1="%F{yellow}%B[%f$PR_BLUE%n$PR_YELLOW@$PR_RED%U%m%u$PR_YELLOW:$PR_RED%2c$PR_YELLOW]$PR_BLUE$(vcs_info_wrapper)%(!.#.$) $PR_NO_COLOR"
 RPS1="$PR_LIGHT_YELLOW(%D{%m-%d %H:%M})$PR_NO_COLOR"
+
+# Some Basic but handy Exports change these to match your systems defaults (or your configuration)
 LC_ALL='en_AU.UTF-8'
 LANG='en_AU.UTF-8'
 LC_CTYPE='en_AU.UTF-8'
 #LC_CTYPE=C
 
+# This is usefull for AMD / Catalyst Graphics Cards.
+LIBGL_DRIVERS_PATH=/usr/lib32/xorg/modules/dri
+
 unsetopt ALL_EXPORT
+
+# Baisc Proxy for Current Shell can be started with "proxy" and stopped with "proxyoff"
+ function proxy(){
+     export http_proxy="http://username:password@ip/domain:port/"
+     export https_proxy=$http_proxy
+     export ftp_proxy=$http_proxy
+     export rsync_proxy=$http_proxy
+     export no_proxy="localhost,127.0.0.1,localaddress,.local"
+     echo -e "\nProxy environment variable set."
+ }
+ function proxyoff(){
+     unset HTTP_PROXY
+     unset http_proxy
+     unset HTTPS_PROXY
+     unset https_proxy
+     unset FTP_PROXY
+     unset ftp_proxy
+     unset RSYNC_PROXY
+     unset rsync_proxy
+     echo -e "\nProxy environment variable removed."
+ } 
+
+#User Exports
+export EDITOR="/usr/bin/vim"
+export DISPLAY=:0
+export GPU_USE_SYNC_OBJECTS=1
+export GPU_MAX_ALLOC_PERCENT=100
+export LIBVA_DRIVER_NAME=vdpau
+export VDPAU_DRIVER=r600
 
 # Aliases Start
 alias man='LC_ALL=C LANG=C man'
 alias ls='ls --color=auto '
 alias ncmpc='ncmpc -c'
 alias =clear
-alias vim='vim -o /home/setkeh/notes' 
+#alias vim='vim -o /home/setkeh/notes' 
+alias partyline='telnet 74.112.203.77 57660'
 
-##SSH Alias's
-#Local
-alias server="ssh root@192.168.1.7"
-alias router="ssh root@192.168.1.1 -p 2221"
-alias workstation="ssh setkeh@192.168.1.8"
-alias vps="ssh root@184.22.124.58"
-
-#Internet
-alias serverinet="ssh root@setkeh.com"
-alias routerinet="ssh root@setkeh.com -p 2222"
-alias tunnel="ssh -D 8080 root@setkeh.com -p 443"
-
-#VNC Alias's
-
-alias vncws="vncviewer setkeh.com:5901"
-alias vncvm="vncviewer setkeh.com:3334"
-alias vncwslocal="vncviewer 192.168.1.8:5901"
-alias vncvmlocal="vncviewer 192.168.1.8:3334"
-
-#Other Commands
-alias net="sudo netcfg-menu"
-
-#Proxy Settings
-function proxy(){
-export http_proxy="localhost:8080/"
-export https_proxy="localhost:8080/"
-export ftp_proxy="localhost:8080/"
-export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
-echo -e "\nProxy environment variable set."
-}
-function proxyoff(){
-unset HTTP_PROXY
-unset http_proxy
-unset HTTPS_PROXY
-unset https_proxy
-unset FTP_PROXY
-unset ftp_proxy
-echo -e "\nProxy environment variable removed."
-} 
-
+#Other Handy/Dev Alias's
+alias net='sudo wifi-menu wlp3s0'
+alias android='/opt/android-sdk/tools/android'
+alias adb='/opt/android-sdk/platform-tools/adb'
 # Aliases End
 
 # key binding
@@ -202,3 +224,5 @@ zstyle ':completion:*:scp:*' group-order files all-files users hosts-domain host
 zstyle ':completion:*:ssh:*' tag-order users 'hosts:-host hosts:-domain:domain hosts:-ipaddr"IP\ Address *'
 zstyle ':completion:*:ssh:*' group-order hosts-domain hosts-host users hosts-ipaddr
 zstyle '*' single-ignored show
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
