@@ -9,8 +9,57 @@
 "	    for OpenVMS:  sys$login:.vimrc
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vundle
+" Vundle Plugin Management.
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set nocompatible             " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Plugins.
+Plugin 'fatih/vim-go'
+Plugin 'vimwiki/vimwiki'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'majutsushi/tagbar'
+Plugin 'mattn/gist-vim'
+Plugin 'vim-scripts/atom-dark'
+Plugin 'scrooloose/syntastic'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
+Plugin 'rodjek/vim-puppet'
+Plugin 'bling/vim-airline'
+Plugin 'OmniSharp/omnisharp-vim'
+Plugin 'rust-lang/rust.vim'
+Plugin 'myint/syntastic-extras'
+Plugin 'roktas/syntastic-more'
+Plugin 'kballard/vim-swift'
+Plugin 'jcf/vim-latex'
+Plugin 'spolu/dwm.vim'
+Plugin 'yms9654/conque'
+Plugin 'mattn/webapi-vim'
+Plugin 'wavded/vim-stylus'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " DEFAULTS
-" Some Vime Defaults
+" Some Vim Defaults
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " When started as "evim", evim.vim will already have done these settings.
@@ -52,6 +101,20 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 nmap <F8> :TagbarToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" INDENT AND TAB-SPACING SETTINGS
+" Setup Default Tab and Indent Spacing
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Global vIM defaults
+set expandtab "Set tabs to spaces
+set tabstop=2 "Set tabs to 2 spaces
+set shiftwidth=4 "Set default indentation to 2 spaces
+
+"Filetype Specific Settings
+autocmd FileType make setlocal noexpandtab "Dont change Tabs to spaces in Makefiles
+autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab "Set Tabs to 4 spaces in python files
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "CUSTOM SETTINGS
 "Set Settings Custom
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -59,47 +122,54 @@ set hlsearch
 set number
 set autoindent
 set backupdir=~/.vim/backup/
+set autochdir
 "set shell=zsh
 colorscheme atom-dark
 let g:go_bin_path = expand("/home/setkeh/.gotools")
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" PATHOGEN
-" Pathogen Plugin Management
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
-
-call pathogen#infect()
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-let g:gist_clip_command = 'xclip -selection primary'
-
-"Powerline configuration
-let g:Powerline_symbols = 'unicode'
 set laststatus=2
-set fillchars+=stl:\ ,stlnc:\
-set t_Co=256
-"python from powerline.vim import setup as powerline_setup
-"python powerline_setup()
-"python del powerline_setup
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='powerlineish'
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ultisnips 
+" Replacing Multipurpose TabKey 
+" BETA
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+ let g:UltiSnipsExpandTrigger="<c-tab>"
+ let g:UltiSnipsJumpForwardTrigger="<c-b>"
+ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+ let g:UltiSnipsEditSplit="vertical"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
 " Stolen: Destroy All Software <https://github.com/garybernhardt>
 " Indent if we're at the beginning of a line. Else, do completion.
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
-endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <c-n>
+"function! InsertTabWrapper()
+"    let col = col('.') - 1
+"    if !col || getline('.')[col - 1] !~ '\k'
+"        return "\<tab>"
+"    else
+"        return "\<c-p>"
+"    endif
+"endfunction
+"inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+"inoremap <s-tab> <c-n>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ARROW KEYS ARE UNACCEPTABLE
