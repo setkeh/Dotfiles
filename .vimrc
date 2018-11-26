@@ -217,15 +217,6 @@ au BufRead,BufNewFile *.pde set filetype=arduino
 au BufRead,BufNewFile *.ino set filetype=arduino
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NERD TREE SETTINGS
-" Custom Usefull Settings for NERDTree
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"autocmd vimenter * NERDTree
-"autocmd vimenter * if !argc() | NERDTree | endif
-"map <C-n> :NERDTreeToggle<CR>
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Custom vIM Tab/Window Commands
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
