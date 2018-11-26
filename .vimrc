@@ -27,7 +27,6 @@ Plugin 'gmarik/Vundle.vim'
 
 " Plugins.
 Plugin 'fatih/vim-go'
-Plugin 'vimwiki/vimwiki'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'majutsushi/tagbar'
@@ -36,16 +35,20 @@ Plugin 'vim-scripts/atom-dark'
 Plugin 'scrooloose/syntastic'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'rodjek/vim-puppet'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'rust-lang/rust.vim'
 Plugin 'myint/syntastic-extras'
 Plugin 'roktas/syntastic-more'
-Plugin 'kballard/vim-swift'
-Plugin 'mattn/webapi-vim'
 Plugin 'tpope/vim-dispatch'
 Plugin 'jreybert/vimagit'
+Plugin 'elzr/vim-json'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'scrooloose/nerdtree'
+
+Bundle 'https://github.com/m-kat/aws-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -65,6 +68,32 @@ endif
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 set encoding=utf-8
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERTREE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+autocmd VimEnter * if argc() == 1 | NERDTree | wincmd p | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ULTISNIPS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "CUSTOM KEYMAPS
